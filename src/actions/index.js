@@ -40,7 +40,7 @@ export const SignIn = ({email, password}) =>{
 
 const loginUserSuccess = (dispatch, user) =>{
     dispatch({type: USER_LOGIN_SUCCESS, payload: user});
-    Actions.employeeList();
+    Actions.main();
 }
 
 const loginUserFail = (dispatch) =>{
