@@ -6,11 +6,11 @@ import {employeeUpdate ,employeeCreate} from '../actions';
 import {Picker} from 'react-native';
 
 
-class EmployeeCreate extends Component {
+class EmployeeCreateForm extends Component {
 
     onButtonPress(){
         const {name, phone, shift} = this.props;
-        this.props.employeeCreate({name,phone,shift});
+        this.props.employeeCreate({name,phone,shift: shift || 'Monday'});
     }
 
     render(){
@@ -73,7 +73,6 @@ const styles = {
     }
 }
 
-import {employeeUpdate ,employeeCreate} from '../actions';
 export default connect(mapStateToProps, 
     {employeeUpdate,employeeCreate})
-(EmployeeCreate);
+(EmployeeCreateForm);
