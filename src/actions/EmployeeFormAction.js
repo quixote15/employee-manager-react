@@ -6,3 +6,10 @@ export const employeeUpdate = ({props, value}) =>{
         payload: {props, value}
     }
 }
+
+export const employeeCreate = ({name, phone, shift}) =>{
+    return {
+        type: EMPLOYEE_CREATE,
+        payload: {name,phone, shift}
+    }
+}
